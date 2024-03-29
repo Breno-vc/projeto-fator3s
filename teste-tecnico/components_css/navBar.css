@@ -74,6 +74,8 @@ input::-moz-focus-inner {
 #conteudoModalSearch {
   display: flex;
   align-items: center;
+  position: absolute;
+  bottom: 15px;
   gap: 10px;
   margin-top: 20px;
   margin-left: 15px;
@@ -83,13 +85,23 @@ input::-moz-focus-inner {
   z-index: 2;
   display: none;
   position: absolute;
+  top: 52px;
   background-color: white;
   border: none;
   border-radius: 2px;
   padding: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   width: 300px;
   height: 60px;
+}
+#setaModal {
+  background-color: white;
+  position: absolute;
+  top: -5px;
+  left: 33px;
+  rotate: 45deg;
+  width: 9px;
+  height: 9px;
 }
 
 #compass_icon {
@@ -97,8 +109,8 @@ input::-moz-focus-inner {
 }
 #upArrow_container {
   position: absolute;
-  left: 260px;
-  bottom: 10px;
+  left: 240px;
+  bottom: 5px;
 }
 #upArrow_icon {
   background-image: url(../public/icons/header-icons/svg-arrow.svg);
@@ -203,5 +215,203 @@ input::-moz-focus-inner {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-@media (min-width: 700px) and (max-width: 880px) {
+/*Estilização para telas entre 720px e 880px*/
+#under_navBar {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  height: 110px;
+}
+#under_navBar::after {
+  content: "";
+  display: block;
+  border-bottom: 1px solid #f7e5e5;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+}
+#divNav_start {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+#underImg_logo {
+  cursor: pointer;
+  position: absolute;
+  top: 50px;
+  left: 15px;
+}
+
+.underSearch_icon_container {
+  width: 400px;
+  height: 42px;
+  margin-left: 3px;
+  margin-top: 7px;
+  align-items: center;
+  position: absolute;
+  top: 35px;
+  left: 170px;
+}
+#underMagnifying_icon {
+  background-image: url(../public/icons/header-icons/sv_magnifying.svg);
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-position: center;
+  position: absolute;
+  z-index: 1;
+  opacity: 52%;
+  top: -3px;
+  width: 50px;
+  height: 50px;
+}
+.underSearchInput {
+  background-color: #fcfafa;
+  opacity: 0.7;
+  font-size: 1em;
+  font-weight: 500;
+  padding: 10px 0px 10px 45px;
+  border: none;
+  border-radius: 30px;
+  cursor: text;
+  width: 200px;
+}
+#underModalSearch {
+  cursor: pointer;
+  z-index: 2;
+  display: none;
+  position: absolute;
+
+  top: 52px;
+  background-color: white;
+  border: none;
+  border-radius: 2px;
+  padding: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  height: 60px;
+}
+.underSearchInput:focus + #underModalSearch {
+  display: block;
+}
+#underConteudo_modal {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 18px;
+  gap: 10px;
+  margin-top: 20px;
+  margin-left: 15px;
+}
+#underSetaModal {
+  background-color: white;
+  position: absolute;
+  top: -5px;
+  left: 33px;
+  rotate: 45deg;
+  width: 9px;
+  height: 9px;
+}
+#underCompass_icon {
+  opacity: 0.5;
+}
+#underWriteLink_container {
+  position: absolute;
+  right: -90px;
+  bottom: 5px;
+  cursor: pointer;
+  width: 40px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+}
+#underWrite_icon {
+  background-image: url(../public/icons/header-icons/svg-writing.svg);
+  background-repeat: no-repeat;
+  background-color: transparent;
+  opacity: 52%;
+  position: absolute;
+  z-index: 1;
+  right: 35px;
+  width: 24px;
+  height: 24px;
+}
+#underWriteLink {
+  margin-left: 10px;
+  text-decoration: none;
+  color: #716f79;
+}
+.hovered #underWriteLink {
+  color: black;
+}
+.hovered #underWrite_icon {
+  opacity: 1;
+}
+#underContainer_userIcon {
+  width: 32px;
+  height: 32px;
+  border: 0.6px solid;
+  border-color: #f0e7e7;
+  border-radius: 40px;
+  overflow: hidden;
+  position: absolute;
+  right: -155px;
+  bottom: 0px;
+}
+
+.upperNav_end {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+  position: relative;
+  gap: 17px;
+  margin-top: 10px;
+}
+.upperNav_end::after {
+  content: "";
+  display: block;
+  border-bottom: 1px solid #f7e5e5;
+  position: absolute;
+  bottom: -7px;
+  width: 100%;
+}
+#upperSignUpBtn {
+  background-color: #458ce4;
+  color: white;
+  font-size: 0.9em;
+  text-align: center;
+  height: 22px;
+  width: 70px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+#upperSignUpBtn:hover {
+  background-color: #2d7ee2;
+}
+#upperSignInText {
+  color: #716f79;
+  text-decoration: none;
+  margin-right: 15px;
+  font-size: 0.9em;
+  position: relative;
+}
+#upperOpen {
+  position: absolute;
+  left: 20px;
+  font-size: 0.9em;
+  color: #716f79;
+}
+#upperArrow_icon {
+  background-image: url(../public/icons/header-icons/svg-arrow.svg);
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-position: center;
+  background-size: 10px;
+  opacity: 0.5;
+  position: absolute;
+  top: -67px;
+  left: -60px;
 }
