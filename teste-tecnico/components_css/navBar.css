@@ -1,0 +1,207 @@
+.header {
+  font-size: 0.9em;
+}
+#navBar {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  height: 55px;
+}
+
+#navBar::after {
+  content: "";
+  display: block;
+  border-bottom: 1px solid #f7e5e5;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+#img_logo {
+  margin-left: 20px;
+  margin-top: 5px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.nav_start {
+  display: flex;
+  align-items: center;
+  margin-left: 5px;
+  height: 50px;
+  width: 600px;
+}
+.search_icon_container {
+  width: 400px;
+  height: 42px;
+  margin-left: 3px;
+  margin-top: 7px;
+  align-items: center;
+}
+#magnifying_icon {
+  background-image: url(../public/icons/header-icons/sv_magnifying.svg);
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-position: center;
+  position: absolute;
+  z-index: 1;
+  opacity: 52%;
+  top: 3px;
+  left: 179px;
+  width: 50px;
+  height: 50px;
+}
+.searchInput {
+  background-color: #fcfafa;
+  opacity: 0.7;
+  font-size: 1em;
+  font-weight: 500;
+  padding: 10px 0px 10px 45px;
+  border: none;
+  border-radius: 30px;
+  cursor: text;
+  width: 200px;
+}
+input:focus {
+  outline: none;
+}
+input::-moz-focus-inner {
+  border: 0;
+}
+.searchInput:focus + #modalSearch {
+  display: block;
+}
+#conteudoModalSearch {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  margin-left: 15px;
+}
+#modalSearch {
+  cursor: pointer;
+  z-index: 2;
+  display: none;
+  position: absolute;
+  background-color: white;
+  border: none;
+  border-radius: 2px;
+  padding: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  width: 300px;
+  height: 60px;
+}
+
+#compass_icon {
+  opacity: 0.5;
+}
+#upArrow_container {
+  position: absolute;
+  left: 260px;
+  bottom: 10px;
+}
+#upArrow_icon {
+  background-image: url(../public/icons/header-icons/svg-arrow.svg);
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-position: center;
+  background-size: 13px;
+  opacity: 0.5;
+  width: 50px;
+  height: 50px;
+}
+.hovered #upArrow_icon {
+  opacity: 1;
+}
+
+.nav_end {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 17px;
+  margin-right: 15px;
+}
+
+#writeLink_container {
+  position: absolute;
+  right: 245px;
+  cursor: pointer;
+  width: 40px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+}
+
+#writeLink {
+  margin-left: 10px;
+  text-decoration: none;
+  color: #716f79;
+}
+
+#write_icon {
+  background-image: url(../public/icons/header-icons/svg-writing.svg);
+  background-repeat: no-repeat;
+  background-color: transparent;
+  opacity: 52%;
+  position: absolute;
+  z-index: 1;
+  right: 35px;
+  width: 24px;
+  height: 24px;
+}
+
+.hovered #writeLink {
+  color: black;
+}
+.hovered #write_icon {
+  opacity: 1;
+}
+#signUpBtn {
+  background-color: #458ce4;
+  color: white;
+  height: 33px;
+  width: 73px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+#signUpBtn:hover {
+  background-color: #2d7ee2;
+}
+#signInText {
+  color: #716f79;
+  text-decoration: none;
+}
+#signInText:hover {
+  color: black;
+}
+
+#container_userIcon {
+  width: 32px;
+  height: 32px;
+  border: 0.6px solid;
+  border-color: #f0e7e7;
+  border-radius: 40px;
+  overflow: hidden;
+  position: relative;
+}
+
+#user_icon {
+  max-width: 100%;
+  height: auto;
+}
+#img_hover {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0);
+}
+#img_hover:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 700px) and (max-width: 880px) {
+}
