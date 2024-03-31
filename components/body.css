@@ -1,6 +1,6 @@
 @font-face {
   font-family: "sohne";
-  src: url(/public/font/testSone.otf) format(opentype);
+  src: url(/public/font/testSohne.otf) format(opentype);
 }
 @font-face {
   font-family: "source-serif-pro";
@@ -176,7 +176,7 @@ code {
   height: 2px;
   background-color: #85848b;
   position: absolute;
-  right: 157px;
+  left: 242px;
   cursor: text;
   top: 10px;
 }
@@ -186,7 +186,7 @@ code {
   height: 2px;
   background-color: #85848b;
   position: absolute;
-  right: 77px;
+  left: 322px;
   top: 10px;
 }
 
@@ -313,14 +313,7 @@ code {
   margin-right: 3px;
 }
 
-#p1,
-#p2,
-#p3,
-#p4,
-#p5,
-#p6,
-#p7,
-#p8 {
+#p1 {
   font-family: "source-serif-pro", Georgia, "Times New Roman", Times, serif;
 
   margin-top: 30px;
@@ -347,9 +340,20 @@ h2 {
   margin-bottom: -30px;
   margin-top: 30px;
 }
+h3 {
+  width: 680px;
+  font-size: 20px;
+  line-height: 20px;
+  font-family: sohne, Helvetica, Arial, sans-serif;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  font-weight: 900;
+  font-style: normal;
+  color: black;
+}
 #ita-paragraph {
   font-family: "source-serif-pro", Georgia, "Times New Roman", Times, serif;
-  font-size: 20px;
+  font-size: 19px;
   color: rgb(41, 41, 41);
   font-style: italic;
 }
@@ -373,4 +377,181 @@ h2 {
   width: 3px;
   top: 6px;
   left: -20px;
+}
+
+#pre1 {
+  font-family: "Source code pro", "Courier New", Courier, monospace;
+  padding: 30px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #202020;
+  background-color: #f9f9f9;
+  border: solid 1px #e0dfdf;
+  border-radius: 4px;
+  width: 670px;
+  margin-top: 30px;
+}
+#purple-span {
+  color: rgb(96, 62, 150);
+}
+#green-span {
+  color: rgb(62, 104, 7);
+}
+#dark-green-span {
+  color: rgb(15, 68, 19);
+}
+#red-span {
+  color: rgb(184, 18, 18);
+}
+
+#dot-container {
+  position: relative;
+  height: 10px;
+  width: 100px;
+  margin-top: 100px;
+}
+#dot1 {
+  background-color: #313131;
+  width: 3px;
+  height: 3px;
+  position: absolute;
+  top: -60px;
+
+  left: 25px;
+}
+#dot2 {
+  background-color: #313131;
+  height: 3px;
+  width: 3px;
+  position: absolute;
+  top: -60px;
+  left: 50px;
+}
+#dot3 {
+  background-color: #313131;
+  height: 3px;
+  width: 3px;
+  position: absolute;
+  top: -60px;
+  left: 75px;
+}
+
+#pseudo-left2 {
+  display: flex;
+  position: relative;
+  margin-top: 30px;
+  height: 60px;
+  margin-bottom: 70px;
+}
+#pseudo-left2::after {
+  content: "";
+  position: absolute;
+  background-color: black;
+  height: 115px;
+  width: 3px;
+  top: 6px;
+  left: -20px;
+}
+#ita-paragraph2 {
+  font-family: "source-serif-pro", Georgia, "Times New Roman", Times, serif;
+  font-size: 19px;
+  color: rgb(41, 41, 41);
+  font-style: italic;
+}
+#ita-paragraph2 code {
+  font-style: normal;
+}
+#img2 {
+  max-width: 670px;
+  margin-top: 40px;
+
+  cursor: zoom-in;
+}
+#img3 {
+  max-width: 670px;
+  margin-top: 40px;
+
+  cursor: zoom-in;
+}
+
+ul,
+li {
+  width: 670px;
+}
+ul,
+li #paragraph-code {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1em;
+}
+li::before {
+  content: "\2022";
+  display: inline-block;
+  font-size: 1.3em;
+}
+#gray-span {
+  color: #62606b;
+}
+#pre2 {
+  font-family: "Source code pro", "Courier New", Courier, monospace;
+  padding: 25px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #202020;
+  background-color: #f9f9f9;
+  border: solid 1px #e0dfdf;
+  border-radius: 4px;
+  width: 670px;
+  margin-top: 30px;
+  min-height: 1080px;
+  overflow-x: scroll;
+}
+
+.mark1 {
+  width: 670px;
+  background-color: rgb(229, 247, 229);
+  color: #313131;
+  cursor: pointer;
+}
+.mark1:hover {
+  background-color: rgb(145, 226, 253);
+}
+#p2 {
+  font-family: "source-serif-pro", Georgia, "Times New Roman", Times, serif;
+
+  margin-top: 30px;
+  font-size: 20px;
+  color: #313131;
+  margin-left: 20px;
+  display: inline;
+}
+.fontSizeParagraph {
+  font-size: 0.9em;
+}
+#sub-anchor {
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: bold;
+}
+#p3 {
+  font-family: "source-serif-pro", Georgia, "Times New Roman", Times, serif;
+  font-size: 19px;
+  color: #313131;
+  margin-left: 20px;
+  display: inline;
+}
+#button-div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: flex-start;
+  margin-top: 50px;
+  width: 670px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 0.9em;
+}
+#gray-button {
+  background-color: #e9e9e9;
+  padding: 8px 20px;
+  border-radius: 20px;
 }
