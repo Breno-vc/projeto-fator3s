@@ -1,17 +1,26 @@
 @font-face {
   font-family: "sohne";
-  src: url(/public/font/testSone.otf);
+  src: url(/public/font/testSone.otf) format(opentype);
 }
-
-#flex-body {
-  position: fixed;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+@font-face {
+  font-family: "source-serif-pro";
+  src: url(/public/font/SourceSerifPro-Regular.otf) format(opentype);
+}
+@font-face {
+  font-family: "Source code pro";
+  src: url(/public/font/SourceCodePro-Regular.ttf) format(truetype);
+}
+p {
   width: 680px;
-  margin-top: 50px;
-  max-width: 100%;
-  padding: 25px;
+}
+#flex-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  margin-top: 40px;
+  gap: 10px;
+  /* justify-content: center; */
 }
 h1 {
   width: 680px;
@@ -21,40 +30,44 @@ h1 {
   overflow-wrap: break-word;
   font-weight: 900;
   font-style: normal;
-  color: rgb(36, 36, 36);
-  letter-spacing: -0.01em;
+  color: #313131;
   line-height: 50px;
 }
 #code-container {
-  margin-top: 10px;
-  background-color: #f3f0ed;
+  margin-top: 5px;
+  width: 680px;
+  margin-bottom: 10px;
+  display: flex;
 }
 
 code {
+  background-color: #f3f0ed;
+  padding: 2px 4px;
   font-family: "Source Code Pro", monospace;
   color: #716f79;
-
+  font-size: 1em;
   font-weight: 400;
 }
 
 #info-container {
+  height: 70px;
+  width: 680px;
   position: relative;
-  height: 1px;
 }
 #photo-container {
   width: 60px;
 }
+
 #publisher-container {
   overflow: hidden;
   background-position: center;
   width: 44px;
   height: 44px;
-  position: absolute;
-  top: 35px;
-  left: 0px;
   border-radius: 30px;
   background-color: white;
   cursor: pointer;
+  position: absolute;
+  top: 5px;
 }
 #publishers-hover {
   cursor: pointer;
@@ -68,19 +81,19 @@ code {
 #publishers-hover:hover {
   background-color: rgba(0, 0, 0, 0.2);
 }
-
 #kpmg-container {
   overflow: hidden;
   background-position: center;
-  width: 26px;
-  height: 26px;
-  position: absolute;
+  width: 27px;
+  height: 27px;
   border: solid white 2px;
-  top: 55px;
-  left: 33px;
+  position: absolute;
   border-radius: 30px;
   background-color: white;
   cursor: pointer;
+  position: absolute;
+  top: 25px;
+  left: 35px;
 }
 #kpmg-hover {
   cursor: pointer;
@@ -94,16 +107,23 @@ code {
 #kpmg-hover:hover {
   background-color: rgba(0, 0, 0, 0.2);
 }
-
 #publisher-info {
-  display: inline-block;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-left: 65px;
+  margin-top: 7px;
+  gap: 3px;
+}
+#name-link-container {
+  width: 450px;
+  display: flex;
 }
 #publishers-name {
+  margin-left: 10px;
   cursor: pointer;
-  position: absolute;
-  left: 65px;
-  top: 35px;
-  width: 150px;
+  width: 140px;
+  position: relative;
 }
 #publishers-name:hover {
   text-decoration: underline;
@@ -114,21 +134,16 @@ code {
   width: 2px;
   height: 2px;
   position: absolute;
+  right: 10px;
   top: 12px;
-  right: 22px;
 }
 #follow-link {
-  top: 35px;
-  position: absolute;
-  left: 200px;
   color: rgb(61, 128, 253);
 }
-
-#published-text {
-  position: absolute;
-  left: 65px;
-  top: 60px;
+#follow-link:hover {
+  color: rgb(50, 97, 252);
 }
+
 #kpmg-link {
   color: black;
 }
@@ -139,47 +154,64 @@ code {
 
 #published-text {
   display: flex;
-  gap: 5px;
+  gap: 12px;
   font-family: "sohne, Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #716f79;
   font-size: 0.9em;
-  width: 500px;
+  margin-left: 10px;
+  position: relative;
 }
 #published-text::after {
   content: "";
   display: block;
   border-bottom: 1px solid #f7e5e5;
   position: absolute;
-  bottom: -15px;
-  left: -60px;
+  bottom: -30px;
+  left: -70px;
 
   width: 675px;
+}
+#dot-5min {
+  width: 2px;
+  height: 2px;
+  background-color: #85848b;
+  position: absolute;
+  right: 157px;
+  cursor: text;
+  top: 10px;
+}
+#dot-feb {
+  cursor: text;
+  width: 2px;
+  height: 2px;
+  background-color: #85848b;
+  position: absolute;
+  right: 77px;
+  top: 10px;
 }
 
 #icones-body {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   width: 670px;
-  gap: 30px;
   align-items: center;
   height: 40px;
-  margin-top: 100px;
+  margin-top: 30px;
 }
-#icones-body::after {
+
+#start-icons-flex::after {
   content: "";
   display: block;
   border-bottom: 1px solid #f7e5e5;
   position: absolute;
-  bottom: 10px;
-  left: 25px;
-  width: 100%;
+  margin-top: 40px;
+  width: 677px;
 }
+
 #clap-icon {
   width: 20px;
   height: 20px;
   opacity: 50%;
-  position: absolute;
-  left: 30px;
   cursor: pointer;
 }
 #clap-icon:hover {
@@ -189,8 +221,6 @@ code {
   font-family: inherit;
   color: #716f79;
   font-size: 0.8em;
-  position: absolute;
-  left: 60px;
 }
 #clap-button:hover {
   color: black;
@@ -199,8 +229,8 @@ code {
 #message-icon-container {
   width: 60px;
   height: 24px;
-  position: absolute;
-  left: 100px;
+  display: flex;
+  align-items: center;
   cursor: pointer;
 }
 
@@ -208,9 +238,6 @@ code {
   width: 24px;
   height: 24px;
   opacity: 50%;
-  position: absolute;
-  left: 0px;
-  bottom: 1px;
 }
 .hovered #message-icon {
   opacity: 1;
@@ -221,11 +248,7 @@ code {
 #message-number {
   font-size: 0.8em;
   color: #716f79;
-  position: absolute;
-  left: 25px;
-  bottom: 1px;
 }
-
 #save-icon-button,
 #share-icon-button,
 #play-icon-button {
@@ -236,9 +259,118 @@ code {
 #play-icon-button:hover {
   opacity: 1;
 }
+#start-icons-flex {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+#clap-container {
+  display: flex;
+  gap: 5px;
+}
+#end-icons-flex {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
 #robot-img {
+  margin-top: 55px;
   height: 1050px;
   width: 680px;
+  cursor: zoom-in;
+}
+
+#photo-by-text {
+  font-family: "sohne, Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #62606b;
+  font-size: 0.9em;
+  width: fit-content;
+}
+
+#anchor-photo {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#paragraph-code {
+  padding: 2px 4px;
+  font-family: "Source code pro", monospace;
+  font-weight: 400;
+  line-height: 30px;
+  color: black;
+  font-size: 0.8em;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+#docker-init-code {
+  padding: 2px 4px;
+  font-family: "Source code pro", monospace;
+  font-weight: 600;
+  line-height: 30px;
+  color: black;
+  font-size: 0.8em;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+#p1,
+#p2,
+#p3,
+#p4,
+#p5,
+#p6,
+#p7,
+#p8 {
+  font-family: "source-serif-pro", Georgia, "Times New Roman", Times, serif;
+
+  margin-top: 30px;
+  font-size: 20px;
+  color: #313131;
+}
+#docker-anchor {
+  text-decoration: underline;
+  color: rgb(41, 41, 41);
+  font-family: "Source serif pro";
+  font-size: 14px;
+  font-weight: 600;
+}
+h2 {
+  width: 680px;
+  font-size: 24px;
+  line-height: 20px;
+  font-family: "sohne", Helvetica, Arial, sans-serif;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  font-weight: 900;
+  font-style: normal;
+  color: rgb(41, 41, 41);
+  margin-bottom: -30px;
+  margin-top: 30px;
+}
+#ita-paragraph {
+  font-family: "source-serif-pro", Georgia, "Times New Roman", Times, serif;
+  font-size: 20px;
+  color: rgb(41, 41, 41);
+  font-style: italic;
+}
+
+#pseudo-leftBar1 {
+  display: flex;
+  position: relative;
+  margin-top: 30px;
+  height: 60px;
+}
+#ita-code {
+  font-family: "Source code pro", Arial, Helvetica, sans-serif;
+  font-size: 0.8em;
+  color: #313131;
+}
+#pseudo-leftBar1::after {
+  content: "";
   position: absolute;
-  top: 350px;
+  background-color: black;
+  height: 55px;
+  width: 3px;
+  top: 6px;
+  left: -20px;
 }
