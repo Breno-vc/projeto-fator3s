@@ -171,17 +171,18 @@ const Body = () => {
           <br />
           app = Flask(__name__) <br />
           <br />
-          <span id="dark-green-span">@app.route('/')</span>
+          <span id="dark-green-span">@app.route(&apos;/&apos;)</span>
           <br />
           <span id="purple-span">def</span> hello_docker(): <br />
           <span id="purple-span"> &nbsp;&nbsp;&nbsp;return</span>{" "}
-          <span id="red-span">'&lt;h1&gt; hello world &lt;/h1'</span>
+          <span id="red-span">&apos;&lt;h1&gt; hello world &lt;/h1&apos;</span>
           <br />
           <br />
-          <span id="purple-span">if</span> __name__== '__main__': <br />
+          <span id="purple-span">if</span> __name__== &apos;__main__&apos;:{" "}
+          <br />
           &nbsp;&nbsp;&nbsp;&nbsp;app.run(debug=
           <span id="purple-span">True</span>, host=
-          <span id="red-span">'0.0.0.0'</span>)
+          <span id="red-span">&apos;0.0.0.0&apos;</span>)
         </pre>
         <pre id="pre1">
           <span id="green-span"># requirements.txt</span>
@@ -292,7 +293,7 @@ const Body = () => {
           &nbsp; &nbsp;&nbsp;appuser <br />
           <span id="green-span">
             # Download dependencies as a separate step to take advantage of
-            Docker's caching. <br />
+            Docker&apos;s caching. <br />
             # Leverage a cache mount to /root/.cache/pip to speed up subsequent
             builds. <br />
             # Leverage a bind mount to requirements.txt to avoid having to copy
@@ -326,7 +327,7 @@ const Body = () => {
           <br />
           <span id="green-span"># Run the application.</span>
           <br />
-          CMD gunicorn <span id="red-span">'app:app' </span>--
+          CMD gunicorn <span id="red-span">&apos;app:app&apos; </span>--
           <span id="purple-span">bind</span>=
           <span id="red-span">0.0.0.0:5000</span>
         </pre>
@@ -377,7 +378,7 @@ const Body = () => {
         </p>
         <p id="p1">
           It uses templates to customize the Docker setup based on your
-          application type while following the industry's best practices.
+          application type while following the industry&apos;s best practices.
         </p>
         <h2>Final words</h2>
         <p id="p1">

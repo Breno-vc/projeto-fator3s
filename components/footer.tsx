@@ -661,7 +661,8 @@ const Footer = () => {
               </span>
               <a href="" id="Devops-footer-text">
                 <h3>
-                  What's the Difference Between <br /> localhost and 127.0.0.1?
+                  What&apos;s the Difference Between <br /> localhost and
+                  127.0.0.1?
                 </h3>
                 <p id="footer-text">
                   My article is open to everyone; non-member <br />
