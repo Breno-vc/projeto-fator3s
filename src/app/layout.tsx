@@ -5,8 +5,9 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Stop writing Dockerfiles",
-  description: "You should stop writing Dockerfiles today — Do this instead",
+  title:
+    "You should stop writing Dockerfiles today — Do this instead | by Akhilesh Mishra | KPMG UK Engineering | Feb, 2024 | Medium",
+  description: "A docker init guide for writing your dockerfiles!",
 };
 
 export default function RootLayout({

@@ -1,21 +1,9 @@
-"use client";
-import React, { useState } from "react";
+import React from "react";
 import "./body.css";
 import Link from "next/link";
+import MessageIcon from "./utils/MessageIcon";
 
 const Body = () => {
-  const [messageNumber, setMessageNumber] = useState(36);
-  const [messageHover, setMessageHover] = useState(false);
-  const handleMessageResponds = () => {
-    /* LÓGICA PARA ALTERAR VALOR DE MENSAGENS*/
-  };
-  const handleMessageHover = () => {
-    setMessageHover(true);
-  };
-  const removeMessageHover = () => {
-    setMessageHover(false);
-  };
-
   return (
     <React.Fragment>
       <article id="flex-body">
@@ -79,19 +67,7 @@ const Body = () => {
               />
               <button id="clap-button">5.1K</button>
             </div>
-            <button
-              id="message-icon-container"
-              onMouseEnter={handleMessageHover}
-              onMouseLeave={removeMessageHover}
-              className={messageHover ? "hovered" : ""}
-            >
-              <img
-                id="message-icon"
-                src="icons/body-icons/message_icon.svg"
-                alt="message icon"
-              />
-              <p id="message-number">{messageNumber}</p>
-            </button>
+            <MessageIcon valorInicial={37} />
           </div>
           <div id="end-icons-flex">
             <button id="save-icon-button">
@@ -460,7 +436,7 @@ const Body = () => {
           <button id="gray-button">DevOps</button>
         </div>
         <div id="icones-body">
-          <div id="start-icons-flex">
+          <div id="start-icons-flex-2">
             <div id="clap-container">
               <img
                 id="clap-icon"
@@ -469,19 +445,7 @@ const Body = () => {
               />
               <button id="clap-button">5.1K</button>
             </div>
-            <button
-              id="message-icon-container"
-              onMouseEnter={handleMessageHover}
-              onMouseLeave={removeMessageHover}
-              className={messageHover ? "hovered" : ""}
-            >
-              <img
-                id="message-icon"
-                src="icons/body-icons/message_icon.svg"
-                alt="message icon"
-              />
-              <p id="message-number">{messageNumber}</p>
-            </button>
+            <MessageIcon valorInicial={37} />
           </div>
           <div id="end-icons-flex">
             <button id="save-icon-button">

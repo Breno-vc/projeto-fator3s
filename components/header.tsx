@@ -8,7 +8,7 @@ const Header = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setTelaMedia(window.innerWidth >= 720 && window.innerWidth <= 880);
+      setTelaMedia(window.innerWidth < 881);
     };
 
     handleResize();
