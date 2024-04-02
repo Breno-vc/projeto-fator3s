@@ -279,17 +279,14 @@ const Body = () => {
           ARG UID=10001 <br />
           RUN adduser \ <br />
           &nbsp; &nbsp;&nbsp;--disabled-password \ <br />
-          &nbsp; &nbsp;&nbsp;--gecos "" \ <br />
-          &nbsp; &nbsp;&nbsp;--home <span id="red-span">
-            "/nonexistent"
-          </span> \ <br />
-          &nbsp; &nbsp;&nbsp;--shell <span id="red-span">
-            "/sbin/nologin"
-          </span>{" "}
-          \ <br />
+          &nbsp; &nbsp;&nbsp;--gecos &quot; \ <br />
+          &nbsp; &nbsp;&nbsp;--home{" "}
+          <span id="red-span">&quot;"/nonexistent&quot;</span> \ <br />
+          &nbsp; &nbsp;&nbsp;--shell{" "}
+          <span id="red-span">&quot;/sbin/nologin&quot;</span> \ <br />
           &nbsp; &nbsp;&nbsp;--no-create-home \ <br />
-          &nbsp; &nbsp;&nbsp;--uuid "
-          <span id="gray-span">&&#123;UID&#125;</span>" \ <br />
+          &nbsp; &nbsp;&nbsp;--uuid &quot;
+          <span id="gray-span">&&#123;UID&#125;</span>&quot; \ <br />
           &nbsp; &nbsp;&nbsp;appuser <br />
           <span id="green-span">
             # Download dependencies as a separate step to take advantage of
