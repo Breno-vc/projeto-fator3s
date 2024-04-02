@@ -506,8 +506,8 @@ const Footer = () => {
                   Hard...
                 </h3>
                 <p id="footer-text">
-                  I recently read the book "Sofrtware <br /> Architecture: The
-                  Hard Pars" by Neal Ford,...
+                  I recently read the book &quot;Software <br /> Architecture:
+                  The Hard Pars&quot; by Neal Ford,...
                 </p>
                 <div id="dot-milan-container">
                   <span id="footer-text">

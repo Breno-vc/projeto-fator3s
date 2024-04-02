@@ -281,7 +281,7 @@ const Body = () => {
           &nbsp; &nbsp;&nbsp;--disabled-password \ <br />
           &nbsp; &nbsp;&nbsp;--gecos &quot; \ <br />
           &nbsp; &nbsp;&nbsp;--home{" "}
-          <span id="red-span">&quot;"/nonexistent&quot;</span> \ <br />
+          <span id="red-span">&quot;/nonexistent&quot;</span> \ <br />
           &nbsp; &nbsp;&nbsp;--shell{" "}
           <span id="red-span">&quot;/sbin/nologin&quot;</span> \ <br />
           &nbsp; &nbsp;&nbsp;--no-create-home \ <br />

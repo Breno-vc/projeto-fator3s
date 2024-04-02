@@ -25,14 +25,14 @@ const Header = () => {
   }, []);
   return (
     <React.Fragment>
-      {telaMedia ? middleScreen() : largeScreen()}
+      {telaMedia ? MiddleScreen() : LargeScreen()}
     </React.Fragment>
   );
 };
 
 export default Header;
 
-const middleScreen = () => {
+const MiddleScreen = () => {
   const [hoverArrow, setHoverArrow] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
 
@@ -157,7 +157,7 @@ const middleScreen = () => {
   );
 };
 
-const largeScreen = () => {
+const LargeScreen = () => {
   const [isHovered, setIsHovered] = useState(false);
   const [hoverArrow, setHoverArrow] = useState(false);
   const handleMouseArrow = () => {
