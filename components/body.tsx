@@ -66,6 +66,43 @@ const Body = () => {
               </div>
             </section>
           </div>
+          <div id="sm-info-container">
+            <section aria-label="Informações do Jornalista" id="publisher-info">
+              <div id="publisher-container">
+                <Image
+                  src={"/images/publisher-image.jpg"}
+                  alt="Akhilesh's picture"
+                  width={44}
+                  height={44}
+                />
+                <div id="publishers-hover"></div>
+              </div>
+              <div className="kpmg-container">
+                <Image
+                  src={"/images/kpmg-image.jpg"}
+                  height={27}
+                  width={27}
+                  alt="KPMG logo picture"
+                />
+                <div id="kpmg-hover"></div>
+              </div>
+              <div id="name-link-container">
+                <p id="publishers-name" aria-label="Nome do publicador">
+                  <a id="a-name">Akhilesh Mishra</a> <span id="dot"></span>
+                </p>
+                <Link href={""} id="follow-link">
+                  Follow
+                </Link>
+              </div>
+              <div>
+                <p id="published-text">
+                  Published in <a id="kpmg-link">KPMG UK Engineering</a>{" "}
+                  <span id="dot-5min" /> 5 min read <span id="dot-feb" /> Feb
+                  8,2024
+                </p>
+              </div>
+            </section>
+          </div>
           <div id="sm-button-div">
             <button id="play-icon-button">
               <Image

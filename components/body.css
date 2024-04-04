@@ -44,7 +44,9 @@ h1 {
   max-width: 100%;
   width: 100%;
 }
-
+#sm-info-container {
+  display: none;
+}
 code {
   background-color: #f3f0ed;
   padding: 2px 4px;
@@ -115,13 +117,13 @@ code {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  align-items: flex-start;
-  margin-left: 65px;
+  align-items: center;
   margin-top: 7px;
   gap: 3px;
+  margin-left: 40px;
 }
 #name-link-container {
-  max-width: 450px;
+  max-width: 230px;
   display: flex;
 }
 #publishers-name {
@@ -559,6 +561,7 @@ li::before {
 }
 #button-div {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 10px;
   justify-content: flex-start;
@@ -608,7 +611,7 @@ li::before {
   }
   #published-text {
     height: auto;
-    max-width: 100%;
+    max-width: 430px;
     width: 100%;
   }
   #code-container #code-1 {
@@ -632,9 +635,17 @@ li::before {
     flex-direction: column;
     align-items: start;
     height: auto;
-    max-width: 100%;
     width: 100%;
     flex-wrap: wrap;
+  }
+  #publisher-container {
+    right: 20px;
+    top: 300px;
+  }
+  .kpmg-container {
+    top: 320px;
+
+    left: 425px;
   }
   #sm-icones-body-1 {
     display: none;
@@ -642,6 +653,7 @@ li::before {
   #sm-button-div {
     display: flex;
     align-items: center;
+    max-width: 400px;
     gap: 20px;
     margin-left: 10px;
     height: 30px;
@@ -718,7 +730,15 @@ li::before {
     max-width: 100%;
     height: auto;
   }
-
+  #info-container {
+    display: none;
+  }
+  #sm-info-container {
+    display: flex;
+  }
+  #sm-info-container #publisher-info {
+    margin-left: 0;
+  }
   ul,
   li {
     width: 100%;
