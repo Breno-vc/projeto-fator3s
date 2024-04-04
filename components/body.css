@@ -563,7 +563,8 @@ li::before {
   gap: 10px;
   justify-content: flex-start;
   margin-top: 50px;
-  width: 670px;
+  width: 100%;
+  max-width: 100%;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 0.9em;
 }
