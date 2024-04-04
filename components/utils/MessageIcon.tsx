@@ -1,8 +1,10 @@
 "use client";
+import Image from "next/image";
 import React, { useState } from "react";
 
 interface Props {
   valorInicial: number | string;
+  className: string;
 }
 
 const MessageIcon = (props: Props) => {
@@ -25,12 +27,15 @@ const MessageIcon = (props: Props) => {
       onMouseLeave={removeMessageHover}
       className={messageHover ? "hovered" : ""}
     >
-      <img
-        id="message-icon"
-        src="icons/body-icons/message_icon.svg"
+      <Image
+        src={"/icons/body-icons/message_icon.svg"}
         alt="message icon"
+        className="message-icon"
+        width={25}
+        height={25}
       />
-      <p id="message-number">{messageNumber}</p>
+
+      <p className={props.className}>{messageNumber}</p>
     </button>
   );
 };

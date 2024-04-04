@@ -1,8 +1,25 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import localFont from "next/font/local";
+import { Source_Code_Pro, Source_Serif_4 } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
+const sohneFont = localFont({
+  src: "../../public/font/testSohne-4.otf",
+  display: "swap",
+  variable: "--sohneFont",
+});
+const sourceCode = Source_Code_Pro({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--sourceCode",
+});
+const sourceSerif = Source_Serif_4({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--sourceSerif",
+});
 
 export const metadata: Metadata = {
   title:
@@ -17,19 +34,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin=""
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
-          rel="stylesheet"
-        />
-      </head>
-      <body className={inter.className}>{children}</body>
+      <head></head>
+      <body
+        className={`${sohneFont.variable} ${sourceSerif.variable} ${sourceCode.variable}`}
+      >
+        {children}
+      </body>
     </html>
   );
 }

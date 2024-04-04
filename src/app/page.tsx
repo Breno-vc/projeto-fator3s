@@ -1,13 +1,16 @@
 import Body from "../../components/body";
 import Footer from "../../components/footer";
 import Header from "../../components/header";
+import React from "react";
 
 export default function Home() {
   return (
-    <main>
+    <React.Fragment>
       <Header />
-      <Body />
+      <main>
+        <Body />
+      </main>
       <Footer />
-    </main>
+    </React.Fragment>
   );
 }

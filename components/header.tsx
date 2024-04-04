@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import "./header.css";
 import Link from "next/link";
+import Image from "next/image";
 
 const Header = () => {
   const [telaMedia, setTelaMedia] = useState(false);
@@ -128,6 +129,8 @@ const MiddleScreen = () => {
               Write
             </Link>
           </div>
+
+          <svg id="underMagnifying_icon"></svg>
           <div id="underContainer_userIcon">
             <img
               id="user_icon"
@@ -192,6 +195,7 @@ const LargeScreen = () => {
               alt="Barra de Pesquisa"
               placeholder="Search"
             />
+
             <div
               id="modalSearch"
               onMouseEnter={handleMouseArrow}

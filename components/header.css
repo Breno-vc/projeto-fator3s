@@ -436,3 +436,34 @@ input::-moz-focus-inner {
   opacity: 0.5;
   position: absolute;
 }
+
+@media (max-width: 550px) {
+  html {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+  #underWriteLink_container {
+    display: none;
+  }
+  .underSearch_icon_container {
+    display: none;
+  }
+  #divNav_start {
+    position: relative;
+  }
+  #underMagnifying_icon {
+    background-image: url(../public/icons/header-icons/sv_magnifying.svg);
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-position: center;
+    position: absolute;
+    opacity: 52%;
+    right: 70px;
+    top: 45px;
+  }
+  #underMagnifying_icon:hover {
+    opacity: 1;
+    cursor: pointer;
+  }
+}
